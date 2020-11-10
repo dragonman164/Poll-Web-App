@@ -1,0 +1,48 @@
+{% extends "polls/base.html" %}
+
+{% block title %}
+  <title>Create New Poll</title>
+{% endblock title %}
+
+{% block body %}
+
+<div class="main-container container-fluid my-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-2">
+
+
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+<!-- <form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Question</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Question" required="true">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Number of Options</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+    
+  </form> -->
+
+
+</div>
+</div>
+</div>
+
+{% endblock body %}
