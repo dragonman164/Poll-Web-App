@@ -28,6 +28,9 @@ def modify(request,question_id):
     form = QuestionForm(instance=question)
     if request.method == 'POST':
         form = QuestionForm(request.POST,instance = question)
+        if request.POST.get('delete') == '1':
+            question.delete()
+            return redirect('/check')
         if form.is_valid():
             form.save()
             return redirect('/check')
