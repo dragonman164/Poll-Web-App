@@ -6,6 +6,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
     path('create/',views.create,name='create'),
+    path('check/',views.check,name="check"),
+    path('modify/<int:question_id>/',views.modify,name="modify"),
 
 
 ]
