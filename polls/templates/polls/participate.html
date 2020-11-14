@@ -1,0 +1,35 @@
+{% extends "polls/base.html" %}
+
+{% block title %}
+<title>Participate </title>
+{% endblock title %}
+
+{% block body %}
+  
+<div class="typewriter">
+    <div class="typewriter-text" style ="font-size: 30px;">Question: {{Question.question}}</div>
+  </div>
+  
+  <!-- <div class="container">
+  <p class="typewriter-text" style="font-size:28px;">Select one Choice:- </p>  </div> -->
+
+  <div class="container">
+    <p class="typewriter-text" style="font-size:18px;">Option 1 : {{Question.option1}}</p>  </div>
+
+    <div class="container">
+        <p class="typewriter-text" style="font-size:18px;">Option 2 :{{Question.option2}}</p>  </div>
+
+        <div class="container">
+            <p class="typewriter-text" style="font-size:18px;">Option 3 : {{Question.option3}}</p>  </div>
+
+
+            <div class="container">
+                <p class="typewriter-text" style="font-size:18px;">Option 4 : {{Question.option4}}</p></div>
+  
+  <form action="" method="post" style="padding-left: 40px;">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  
+{% endblock body %}

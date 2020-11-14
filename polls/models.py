@@ -12,3 +12,11 @@ class Question(models.Model):
     
     def __str__(self):
         return self.question
+
+class Participant(models.Model):
+    question = models.ForeignKey(Question,on_delete=models.CASCADE)
+    selected_option = models.IntegerField(
+        choices = [(1,1),(2,2),(3,3),(4,4)],
+        blank = False,
+        default = 1
+    )

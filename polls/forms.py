@@ -1,5 +1,5 @@
 from django import forms
-from .models import Question
+from .models import Question,Participant
 
 class QuestionForm(forms.ModelForm):
     class Meta:
@@ -13,3 +13,14 @@ class QuestionForm(forms.ModelForm):
             'option4':forms.TextInput(attrs ={'class':'form-control'}),        
         }
 
+class ParticipantForm(forms.ModelForm):
+    class Meta:
+        model = Participant
+        fields = ['selected_option']
+        # fields = ['selected_option']
+        # widgets = {
+        # 'selected_option':forms.MultipleChoiceField(
+        #     choices = [(1,1),(2,2),(3,3),(4,4)]
+        #  )
+        #  }
+        

@@ -1,0 +1,29 @@
+{% extends "polls/base.html" %}
+
+{% block title %}
+<title>Check Results Here</title>
+{% endblock title %}
+ 
+{% block body %}
+    
+<div class="typewriter">
+    <div class="typewriter-text" style ="font-size: 30px;">Question: {{Question.question}}</div>
+  </div>
+  
+  <!-- <div class="container">
+  <p class="typewriter-text" style="font-size:28px;">Select one Choice:- </p>  </div> -->
+
+  <div class="container">
+    <p class="typewriter-text" style="font-size:18px;">Participants who voted  {{Question.option1}} :{{count.option1}} </p>  </div>
+
+    <div class="container">
+        <p class="typewriter-text" style="font-size:18px;">Participants who voted {{Question.option2}} :{{count.option2}}</p>  </div>
+
+        <div class="container">
+            <p class="typewriter-text" style="font-size:18px;">Participants who voted {{Question.option3}} :{{count.option3}}</p>  </div>
+
+
+            <div class="container">
+                <p class="typewriter-text" style="font-size:18px;">Participants who voted {{Question.option4}} :{{count.option4}}</p></div>
+  
+{% endblock body %}

@@ -11,7 +11,9 @@
         <th scope="col">S. No.</th>
         <th scope="col">Question</th>
         <th scope="col">Date Created/Modified</th>
-        <th scope="col">Click to Edit/View Result</th>
+        <th scope="col">Particpate</th>
+        <th scope="col">Edit/Delete</th>
+        <th scope="col">View Result</th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +22,9 @@
         <th scope="row">{{forloop.counter}}</th>
         <td>{{ques.question}}</td>
         <td>{{ques.pub_date}}</td>
+        <td><a href="/participate/{{ques.id}}" style="color:white;" >Click to Particpate</a></td>
             <td><a href="/modify/{{ques.id}}" style="color:white;" >Click here to modify the question</a></td>
+            <td><a href="/results/{{ques.id}}" style="color:white;" >Click here to view Result</a></td>
         </form>
         
       </tr>
